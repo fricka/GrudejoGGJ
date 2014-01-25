@@ -63,6 +63,39 @@
                 <action id="-5" name="Set width" sid="5950733152223486" type="TiledBackground">
                     <param id="0" name="Width">LayoutWidth</param>
                 </action>
+                <action id="-1" name="Set X" sid="6065563565284943" type="FundoPretp">
+                    <param id="0" name="X">LayoutWidth/2</param>
+                </action>
+                <action id="-5" name="Set width" sid="2970303354867539" type="FundoPretp">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+                <action id="-5" name="Set width" sid="557510506513366" type="Agua">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2026320950953402">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="977426817019883" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set layout angle" sid="7010904031352095" type="System">
+                    <param id="0" name="Angle">LayoutAngle + 180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6514625321247088">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="333272041605818" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="5" name="Set gravity" sid="6468754505843775" type="Personagens">
+                    <param id="0" name="Gravity">Self.Platform.Gravity * -1</param>
+                </action>
             </actions>
         </event-block>
     </events>
