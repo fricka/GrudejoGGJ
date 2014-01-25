@@ -10,6 +10,7 @@
     <unique-id>32k6e1v84c9oq</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -17,7 +18,6 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -46,7 +46,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="1" name="UIobjects">
             <object-type name="FundoPretp" sid="1185731834807758">
                 <plugin id="TiledBg" />
@@ -62,32 +62,33 @@
             <object-type name="personagemPulo" sid="5825933759978601">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="Platform" sid="282619828859163">
-                        <behavior id="Platform" />
-                    </behavior-type>
                     <behavior-type name="ScrollTo" sid="8533722108524911">
                         <behavior id="scrollto" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2856874649053025" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Tiro" x="1" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="personagemTiro" sid="5040384495151055">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="flipado" sid="9849217228881407" type="boolean" />
+                </instance-variables>
                 <behaviors>
-                    <behavior-type name="8Direction" sid="460111855772584">
-                        <behavior id="EightDir" />
-                    </behavior-type>
                     <behavior-type name="ScrollTo" sid="7091977741300681">
                         <behavior id="scrollto" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8951597390770258" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Tiro" x="1" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -121,15 +122,29 @@
         <object-type name="Gamepad" sid="3411371637443813">
             <plugin id="gamepad" />
         </object-type>
+        <object-type name="Function" sid="7198522997343049">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Personagens" plugin-id="Sprite" sid="1646151690626581">
+            <members>
+                <member>personagemPulo</member>
+                <member>personagemTiro</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Platform" sid="1540008843663474">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>FASE.xml</event-sheet>
-        <event-sheet>PersonagemPulo.xml</event-sheet>
-        <event-sheet>PersonagemTiro.xml</event-sheet>
+        <event-sheet>Personagens.xml</event-sheet>
         <event-sheet>Joystick.xml</event-sheet>
     </event-folder>
     <global-instances>
@@ -139,6 +154,7 @@
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="10" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FASE</name>
     <events>
-        <include>PersonagemTiro</include>
-        <include>PersonagemPulo</include>
+        <include>Personagens</include>
     </events>
 </c2eventsheet>
