@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enemy</name>
+    <events>
+        <event-block sid="3631729587769781">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="1510558733877833" type="inimigos" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="7387219806340039" type="inimigos" />
+            </actions>
+        </event-block>
+        <event-block sid="2339105837743483">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="1392472546080877" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="7139321360908151" type="Sprite">
+                    <param id="0" name="Object">enemy</param>
+                    <param id="1" name="Layer">Self.LayerName</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="7565001170325209" type="inimigos">
+                    <param id="0" name="X">Personagens.X</param>
+                    <param id="1" name="Y">Personagens.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1017710850381306">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7970857044418753" type="laser">
+                    <param id="0" name="Object">inimigos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="322859022353905" type="inimigos" />
+            </actions>
+        </event-block>
+        <event-block sid="4657637754094634">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4003673185242425" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3723883490373176" type="Sprite">
+                    <param id="0" name="X">Personagens.X + 800</param>
+                    <param id="1" name="Y">random(layoutHeight)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
