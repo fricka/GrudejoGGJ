@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PersonagemTiro</name>
+    <events>
+        <variable constant="0" name="veloHorizontal" sid="160695109534494" static="0" type="number">200</variable>
+        <variable constant="0" name="veloHorizontalNegativa" sid="4308457271295455" static="0" type="number">-200</variable>
+        <event-block sid="9064636763157012">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6425595180775403" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="2407967593338289" type="personagemTiro">
+                    <param id="0" name="Y">personagemPulo.Y + 236</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9696763462855552">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2879502658994879" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="4808062674678219" type="personagemTiro">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7646024031393197">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9197625100674484" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="2617513358728765" type="personagemTiro">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5234293887054043">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="1269856292093158" type="personagemTiro" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="6152099945059829" type="FundoPretp">
+                    <param id="0" name="Opacity">20</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

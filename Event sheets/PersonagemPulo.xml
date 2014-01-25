@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PersonagemPulo</name>
+    <events>
+        <event-block sid="9089332843566826">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8061813122002175" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
