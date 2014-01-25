@@ -50,5 +50,34 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="5804826155953917">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="9105265051149961" type="inimigos">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">240</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="9326072962980739" type="inimigos">
+                    <param id="0" name="Opacity">73</param>
+                </action>
+                <action id="8" name="Set flipped" sid="850524025153909" type="inimigos">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5734390861352947">
+            <conditions>
+                <condition id="-22" name="Else" sid="1944959160886224" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="5801607431415158" type="inimigos">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="8" name="Set flipped" sid="5824315412727253" type="inimigos">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
