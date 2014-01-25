@@ -10,6 +10,7 @@
     <unique-id>32k6e1v84c9oq</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -24,7 +25,9 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Viktor Korsun" id="waterbg">Water background</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -71,6 +74,13 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2856874649053025" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
+                            <collision-poly>
+                                <point x="0.699219" y="1" />
+                                <point x="0.242188" y="1" />
+                                <point x="0.335938" y="0.410156" />
+                                <point x="0.523438" y="0.224609" />
+                                <point x="0.789063" y="0.476563" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -89,6 +99,13 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8951597390770258" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
+                            <collision-poly>
+                                <point x="0.8125" y="0.757813" />
+                                <point x="0.496094" y="1" />
+                                <point x="0.171875" y="0.851563" />
+                                <point x="0.257813" y="0" />
+                                <point x="0.808594" y="0" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -134,13 +151,33 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="7736465646860015">
+        <object-type name="spawnador" sid="7736465646860015">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3284004459456212" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="1247440723283971">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="spawnador2" sid="2516752057121881">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3434098388512963" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground2" sid="4433254927226859">
+            <plugin id="TiledBg" />
+            <effects>
+                <effect-type name="WaterBackground">
+                    <effect id="waterbg" />
+                </effect-type>
+            </effects>
+            <texture />
         </object-type>
     </object-folder>
     <families>
@@ -183,6 +220,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="10" />
+        <global-instance type="Browser" uid="14" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

@@ -6,5 +6,64 @@
         <include>Enemy</include>
         <include>Joystick</include>
         <include>Personagens</include>
+        <event-block any="1" sid="5478079036861174">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="8389266792177917" type="Keyboard" />
+                <condition id="8" name="On any button pressed" sid="533501610737421" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                </condition>
+                <condition id="8" name="On any button pressed" sid="6886112638748748" type="Gamepad">
+                    <param id="0" name="Gamepad">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" sid="3490602180801791" type="Browser">
+                    <param id="0" name="Mode">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9708745016640734">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7160678043113329" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="9296534512308413" type="spawnador2">
+                    <param id="0" name="X">Personagens.X + 800</param>
+                    <param id="1" name="Y">240</param>
+                </action>
+                <action id="-24" name="Move to top" sid="8858780414729018" type="Personagens" />
+            </actions>
+        </event-block>
+        <event-block sid="1184931963607013">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2725838568891547" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="8560892878524797" type="spawnador2">
+                    <param id="0" name="Object">FundoPretp</param>
+                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="4569840521230504" type="FundoPretp">
+                    <param id="0" name="Width">random(32,256)</param>
+                    <param id="1" name="Height">random(32,256)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6061394757130688">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2634640846854402" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="4544580076731943" type="TiledBackground2">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+                <action id="-5" name="Set width" sid="5950733152223486" type="TiledBackground">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

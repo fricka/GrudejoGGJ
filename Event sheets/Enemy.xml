@@ -18,7 +18,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="7139321360908151" type="Sprite">
+                <action id="0" name="Spawn another object" sid="7139321360908151" type="spawnador">
                     <param id="0" name="Object">enemy</param>
                     <param id="1" name="Layer">Self.LayerName</param>
                     <param id="2" name="Image point">0</param>
@@ -44,7 +44,7 @@
                 <condition id="-1" name="Every tick" sid="4003673185242425" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="3723883490373176" type="Sprite">
+                <action id="-3" name="Set position" sid="3723883490373176" type="spawnador">
                     <param id="0" name="X">Personagens.X + 800</param>
                     <param id="1" name="Y">random(layoutHeight)</param>
                 </action>
