@@ -15,7 +15,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -95,11 +94,6 @@
         </object-type>
         <object-type name="TiledBackground" sid="2715323446721945">
             <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="6469036823129158">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
             <texture />
         </object-type>
     </object-folder>

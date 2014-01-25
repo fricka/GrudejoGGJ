@@ -3,8 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PersonagemTiro</name>
     <events>
-        <variable constant="0" name="veloHorizontal" sid="160695109534494" static="0" type="number">200</variable>
-        <variable constant="0" name="veloHorizontalNegativa" sid="4308457271295455" static="0" type="number">-200</variable>
         <event-block sid="9064636763157012">
             <conditions>
                 <condition id="-1" name="Every tick" sid="6425595180775403" type="System" />
