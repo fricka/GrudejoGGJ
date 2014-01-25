@@ -10,23 +10,24 @@
     <unique-id>32k6e1v84c9oq</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Viktor Korsun" id="waterbg">Water background</effect>
+        <effect author="Viktor Korsun" id="water">Water</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -59,6 +60,15 @@
                         <behavior id="solid" />
                     </behavior-type>
                 </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="FundoPretp2" sid="3122014809564371">
+                <plugin id="TiledBg" />
+                <effects>
+                    <effect-type name="Water">
+                        <effect id="water" />
+                    </effect-type>
+                </effects>
                 <texture />
             </object-type>
         </object-folder>
