@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PowerUps</name>
+    <events>
+        <variable constant="0" name="powerUpFrame" sid="1006116601673124" static="0" type="number">0</variable>
+        <event-block sid="7305410873771421">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2466766436504906" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set at X" sid="5315286024027048" type="powerUps">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="2" name="Set at X" sid="6170457044122965" type="powerUps">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6850663454852743" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="0" name="Call function" sid="3583585628072334" type="Function">
+                    <param id="0" name="Name">&quot;powerUps&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2291539805603383">
+            <conditions>
+                <condition id="0" name="On function" sid="541133033119067" type="Function">
+                    <param id="0" name="Name">&quot;trocaAgua&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set layout angle" sid="1249301543729638" type="System">
+                    <param id="0" name="Angle">LayoutAngle + 45</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3609387762791121">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4750111821516271" type="System">
+                            <param id="0" name="First value">LayoutAngle</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="4070098796091431" type="TiledBackgroundBaixo">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="9539946489206841" type="TiledBackgroundCima">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="6769886197088097" type="AguaBaixo">
+                            <param id="0" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="903331605940733">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5917235302442615" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="8438149694766325" type="TiledBackgroundBaixo">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="5246400578326871" type="TiledBackgroundCima">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="5675782100897951" type="AguaBaixo">
+                            <param id="0" name="Y">240</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8995933711778072">
+            <conditions>
+                <condition id="0" name="On function" sid="9995206428612162" type="Function">
+                    <param id="0" name="Name">&quot;powerUps&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="3610583116970508" type="System">
+                    <param id="0" name="Seconds">random(5,10)</param>
+                </action>
+                <action id="-9" name="Set value" sid="4560738975675175" type="System">
+                    <param id="0" name="Variable">powerUpFrame</param>
+                    <param id="1" name="Value">floor(random(0,2))</param>
+                </action>
+                <action id="-3" name="Create object" sid="1097382594490852" type="System">
+                    <param id="0" name="Object to create">gravidade</param>
+                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                    <param id="2" name="X">Personagens.X +200</param>
+                    <param id="3" name="Y">random(LayoutHeight)</param>
+                </action>
+                <action id="5" name="Set frame" sid="4356631729007786" type="gravidade">
+                    <param id="0" name="Frame number">powerUpFrame</param>
+                </action>
+                <action id="-24" name="Move to top" sid="8465214126315855" type="gravidade" />
+                <action id="-16" name="Wait" sid="9687520347781177" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8346019271627752" type="gravidade" />
+                <action id="0" name="Call function" sid="8546268892763425" type="Function">
+                    <param id="0" name="Name">&quot;powerUps&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2574777783858193">
+            <conditions>
+                <condition id="0" name="On function" sid="9826265538318533" type="Function">
+                    <param id="0" name="Name">&quot;inverterGravidade&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1981196109202907">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="5416609695210465" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="4724067832485622" type="personagemPulo">
+                            <param id="0" name="Gravity">-1500</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="3078478929516465" type="personagemTiro">
+                            <param id="0" name="Gravity">1500</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="7884752784901229" type="personagemPulo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="639416692241784" type="personagemTiro">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8869128969469253">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3274124636570715" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="4720951450110681" type="personagemPulo">
+                            <param id="0" name="Gravity">1500</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="2315052283610562" type="personagemTiro">
+                            <param id="0" name="Gravity">-1500</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="6179186461310541" type="personagemPulo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="8638472992826678" type="personagemTiro">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6481072303651801">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7776229300274372" type="Personagens">
+                    <param id="0" name="Object">gravidade</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5933716235457641">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="8956287094626663" type="gravidade">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6224688212013571" type="Function">
+                            <param id="0" name="Name">&quot;inverterGravidade&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2356399592044458" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1443069339463867" type="Function">
+                            <param id="0" name="Name">&quot;inverterGravidade&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4242273896129279">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="7734379458922441" type="gravidade">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6358982369393429" type="Function">
+                            <param id="0" name="Name">&quot;trocaAgua&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9725495520274102">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4457014844873933" type="gravidade" />
+                        <action disabled="1" id="0" name="Call function" sid="5755166605893129" type="Function">
+                            <param id="0" name="Name">&quot;powerUps&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -3,9 +3,41 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FASE</name>
     <events>
+        <variable constant="0" name="trocaAgua" sid="3096158716242891" static="0" type="number">0</variable>
+        <include>PowerUps</include>
         <include>Enemy</include>
         <include>Joystick</include>
         <include>Personagens</include>
+        <event-block sid="6061394757130688">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2634640846854402" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="4544580076731943" type="TiledBackgroundBaixo">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+                <action id="-5" name="Set width" sid="5950733152223486" type="TiledBackgroundCima">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+                <action id="-1" name="Set X" sid="6065563565284943" type="FundoPretp">
+                    <param id="0" name="X">LayoutWidth/2</param>
+                </action>
+                <action id="-5" name="Set width" sid="2970303354867539" type="FundoPretp">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+                <action id="-5" name="Set width" sid="557510506513366" type="AguaBaixo">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="4189456526172821" type="AguaCima">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Water&quot;</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="2717455608745936" type="TiledBackgroundCima">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block any="1" sid="5478079036861174">
             <conditions>
                 <condition id="1" name="On any key pressed" sid="8389266792177917" type="Keyboard" />
@@ -52,28 +84,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6061394757130688">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="2634640846854402" type="System" />
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="4544580076731943" type="TiledBackground2">
-                    <param id="0" name="Width">LayoutWidth</param>
-                </action>
-                <action id="-5" name="Set width" sid="5950733152223486" type="TiledBackground">
-                    <param id="0" name="Width">LayoutWidth</param>
-                </action>
-                <action id="-1" name="Set X" sid="6065563565284943" type="FundoPretp">
-                    <param id="0" name="X">LayoutWidth/2</param>
-                </action>
-                <action id="-5" name="Set width" sid="2970303354867539" type="FundoPretp">
-                    <param id="0" name="Width">LayoutWidth</param>
-                </action>
-                <action id="-5" name="Set width" sid="557510506513366" type="Agua">
-                    <param id="0" name="Width">LayoutWidth</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="2026320950953402">
             <conditions>
                 <condition id="0" name="On key pressed" sid="977426817019883" type="Keyboard">
@@ -81,8 +91,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-22" name="Set layout angle" sid="7010904031352095" type="System">
-                    <param id="0" name="Angle">LayoutAngle + 180</param>
+                <action id="0" name="Call function" sid="1811137671346185" type="Function">
+                    <param id="0" name="Name">&quot;trocaAgua&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>

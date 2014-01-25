@@ -68,7 +68,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="1916758907762866" title="Atirar">
             <sub-events>
-                <event-block sid="4632968694387038">
+                <event-block collapsed="1" sid="4632968694387038">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="5262026769828763" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
@@ -93,7 +93,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1319183202236085">
+                <event-block sid="1319183202236085">
                     <conditions>
                         <condition id="0" name="On function" sid="9603812414711649" type="Function">
                             <param id="0" name="Name">&quot;atirar&quot;</param>
@@ -162,6 +162,23 @@
                         </action>
                         <action id="-26" name="Restart layout" sid="4830546495338807" type="System" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="5207560428136836">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4961270052231967" type="System">
+                                    <param id="0" name="First value">LayoutAngle</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2334187166405756" type="Function">
+                                    <param id="0" name="Name">&quot;trocaAgua&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
