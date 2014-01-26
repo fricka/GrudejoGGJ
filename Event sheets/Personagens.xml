@@ -67,19 +67,6 @@
         </event-group>
         <event-group description="" sid="1916758907762866" title="Atirar">
             <sub-events>
-                <event-block sid="7017836595966138">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="2509253633606593" type="personagemTiro">
-                            <param id="0" name="Animation">&quot;a&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6428072003492857" type="personagemTiro">
-                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="4632968694387038">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="5262026769828763" type="Keyboard">
@@ -96,13 +83,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="8605423789760713" type="Personagens">
-                                    <param id="0" name="Animation">&quot;a&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="6593545881435088" type="System">
-                                    <param id="0" name="Seconds">0.2</param>
-                                </action>
                                 <action id="0" name="Call function" sid="7042771519496327" type="Function">
                                     <param id="0" name="Name">&quot;atirar&quot;</param>
                                     <param id="1" name="Parameter {n}">Personagens.UID</param>
@@ -118,6 +98,13 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="4" name="Set animation" sid="8605423789760713" type="Personagens">
+                            <param id="0" name="Animation">&quot;a&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6593545881435088" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
                         <action id="-5" name="Set width" sid="2878405842941412" type="9patch3">
                             <param id="0" name="Width">Self.Width -20</param>
                         </action>
@@ -134,6 +121,10 @@
                                     <param id="0" name="Object">laser</param>
                                     <param id="1" name="Layer">&quot;Personagens&quot;</param>
                                     <param id="2" name="Image point">&quot;Tiro&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2222136559785355" type="Function">
+                                    <param id="0" name="Name">&quot;tocaTiro&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                             <sub-events>

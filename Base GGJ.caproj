@@ -10,26 +10,26 @@
     <unique-id>32k6e1v84c9oq</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
-        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Viktor Korsun" id="waterbg">Water background</effect>
@@ -99,26 +99,29 @@
                     <animation framecount="3" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="2856874649053025" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.328125" y="0.390625" />
+                                <point x="0.523438" y="0.232422" />
+                                <point x="0.824219" y="0.417969" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.328125" y="0.390625" />
+                                <point x="0.515625" y="0.189453" />
+                                <point x="0.824219" y="0.417969" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.328125" y="0.390625" />
+                                <point x="0.523438" y="0.197266" />
+                                <point x="0.824219" y="0.417969" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -126,48 +129,51 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.257813" y="1" />
+                                <point x="0.394531" y="0.292969" />
+                                <point x="0.703125" y="0.210938" />
+                                <point x="0.832031" y="0.466797" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.257813" y="1" />
+                                <point x="0.394531" y="0.292969" />
+                                <point x="0.703125" y="0.210938" />
+                                <point x="0.832031" y="0.466797" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.257813" y="1" />
+                                <point x="0.394531" y="0.292969" />
+                                <point x="0.703125" y="0.210938" />
+                                <point x="0.832031" y="0.466797" />
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="pulando" pingpong="0" repeatcount="1" repeatto="1" sid="9535344832160227" speed="12">
+                    <animation framecount="2" loop="0" name="pulando" pingpong="0" repeatcount="1" repeatto="1" sid="9535344832160227" speed="21">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.417969" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.417969" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -175,19 +181,21 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.445313" y="0.988281" />
+                                <point x="0.332031" y="0.375" />
+                                <point x="0.648438" y="0.216797" />
+                                <point x="0.863281" y="0.347656" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.445313" y="0.988281" />
+                                <point x="0.332031" y="0.375" />
+                                <point x="0.648438" y="0.216797" />
+                                <point x="0.863281" y="0.347656" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -195,37 +203,37 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -233,60 +241,57 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.726563" y="0.996094" />
+                                <point x="0.210938" y="0.996094" />
+                                <point x="0.367188" y="0.25" />
+                                <point x="0.742188" y="0.238281" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="1" repeatto="0" sid="9405557417130398" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.796875" y="0.5" />
-                                <point x="0.671875" y="0.671875" />
-                                <point x="0.5" y="0.765625" />
-                                <point x="0.421875" y="0.578125" />
-                                <point x="0.375" y="0.5" />
-                                <point x="0.40625" y="0.40625" />
-                                <point x="0.5" y="0.328125" />
-                                <point x="0.71875" y="0.28125" />
+                                <point x="0.703125" y="0.996094" />
+                                <point x="0.480469" y="1" />
+                                <point x="0.355469" y="0.355469" />
+                                <point x="0.642578" y="0.199219" />
+                                <point x="0.878906" y="0.414063" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -307,19 +312,21 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -327,28 +334,31 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -356,46 +366,51 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -403,34 +418,41 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="1" repeatto="0" sid="549747903306464" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.8125" y="0.5" />
-                                <point x="0.703125" y="0.703125" />
-                                <point x="0.5" y="0.96875" />
-                                <point x="0.265625" y="0.734375" />
-                                <point x="0.0625" y="0.5" />
-                                <point x="0.15625" y="0.15625" />
-                                <point x="0.5" y="0.03125" />
-                                <point x="0.765625" y="0.234375" />
+                                <point x="0.835938" y="0.765625" />
+                                <point x="0.472656" y="1" />
+                                <point x="0.0703125" y="0.757813" />
+                                <point x="0.25" y="0" />
+                                <point x="0.898438" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -744,6 +766,14 @@
         <object-type name="Audio" sid="7815569661009617">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="moldura" sid="8504578832250767">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154104348868597" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Personagens" plugin-id="Sprite" sid="1646151690626581">
@@ -865,6 +895,9 @@
         <file name="Reverse_Screen.m4a" />
         <file name="Reverse_Screen.ogg" />
         <file name="Reverse_Screen.wav" />
+        <file name="Background_Music.m4a" />
+        <file name="Background_Music.ogg" />
+        <file name="Background_Music.wav" />
     </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1">

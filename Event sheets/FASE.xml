@@ -3,12 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FASE</name>
     <events>
+        <include>Som</include>
         <include>Animação</include>
-        <variable constant="0" name="trocaAgua" sid="3096158716242891" static="0" type="number">0</variable>
         <include>PowerUps</include>
         <include>Enemy</include>
         <include>Joystick</include>
         <include>Personagens</include>
+        <variable constant="0" name="trocaAgua" sid="3096158716242891" static="0" type="number">0</variable>
         <event-block sid="6061394757130688">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2634640846854402" type="System" />
@@ -34,6 +35,12 @@
                     <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
                 </action>
                 <action id="-9" name="Destroy" sid="9834203328350591" type="gravidade" />
+                <action id="0" name="Play" sid="3772569910336381" type="Audio">
+                    <param id="0" name="Audio file">Background_Music</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-40</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3594057898741649">
@@ -62,7 +69,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" disabled="1" sid="5478079036861174">
+        <event-block any="1" sid="5478079036861174">
             <conditions>
                 <condition id="1" name="On any key pressed" sid="8389266792177917" type="Keyboard" />
             </conditions>

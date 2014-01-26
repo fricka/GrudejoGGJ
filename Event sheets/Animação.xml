@@ -3,28 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Animação</name>
     <events>
-        <event-block sid="4492117040515193">
-            <conditions>
-                <condition behavior="Platform" id="8" name="On moved" sid="2056077290163658" type="Personagens" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="3480970341638089" type="Personagens">
-                    <param id="0" name="Animation">&quot;andando&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4367085415768239">
-            <conditions>
-                <condition behavior="Platform" id="7" name="On stopped" sid="6297301134515508" type="Personagens" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="8765635730303119" type="Personagens">
-                    <param id="0" name="Animation">&quot;idle&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="7206927923462059">
             <conditions>
                 <condition behavior="Platform" id="5" name="On jump" sid="4129845938564299" type="Personagens" />
@@ -47,12 +25,59 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="5544738997902876">
+        <event-block sid="4367085415768239">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="6297301134515508" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8765635730303119" type="Personagens">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4492117040515193">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="2056077290163658" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3480970341638089" type="Personagens">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5544738997902876">
             <conditions>
                 <condition behavior="Platform" id="9" name="On landed" sid="89651121170598" type="Personagens" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="1656253852119677" type="Personagens">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1302106363987527">
+            <conditions>
+                <condition id="5" name="On any finished" sid="6406195895937063" type="Personagens" />
+                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="8272674588062732" type="Personagens" />
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="3450679956476394" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1675764642639856" type="Personagens">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6609795797986589">
+            <conditions>
+                <condition id="5" name="On any finished" sid="2960094704550566" type="Personagens" />
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="856568078371005" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1795088424906727" type="Personagens">
                     <param id="0" name="Animation">&quot;idle&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
