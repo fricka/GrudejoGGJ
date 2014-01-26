@@ -14,14 +14,17 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -52,7 +55,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="UIobjects">
             <object-type name="FundoPretp" sid="1185731834807758">
                 <plugin id="TiledBg" />
@@ -158,7 +161,9 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5909659050744409" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6">
+                        <image-point name="Imagepoint 1" x="1" y="0.6" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -172,13 +177,83 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="7" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="7988324840061357" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.367188" y="0.367188" />
+                            <point x="0.5" y="0.273438" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.570313" y="0.570313" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.335938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.367188" y="0.367188" />
+                            <point x="0.5" y="0.273438" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.570313" y="0.570313" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.335938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.367188" y="0.367188" />
+                            <point x="0.5" y="0.273438" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.570313" y="0.570313" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.335938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.367188" y="0.367188" />
+                            <point x="0.5" y="0.273438" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.570313" y="0.570313" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.335938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.367188" y="0.367188" />
+                            <point x="0.5" y="0.273438" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.570313" y="0.570313" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.335938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.367188" y="0.367188" />
+                            <point x="0.5" y="0.273438" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.570313" y="0.570313" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.335938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.367188" y="0.367188" />
+                            <point x="0.5" y="0.273438" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.570313" y="0.570313" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.335938" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -210,14 +285,6 @@
             </effects>
             <texture />
         </object-type>
-        <object-type name="raio" sid="7004996571747728">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239646781451105" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="gravidade" sid="4297786664981192">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -230,6 +297,89 @@
         <object-type global="1" name="powerUps" sid="2924957335582089">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="canhao" sid="769063204493781">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="4077557694016836">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="4996149667212311">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4577073975984242" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="alerta" sid="3841458702545529">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7907999463767454">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="4773762490136698">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="106560012780739" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="aviao" sid="2520746099874133">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="2752330290332857">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2408792589014902" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Tiro" x="0.5" y="1" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="turret" sid="534545769798041">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Turret" sid="3557466118114783">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2749249357884077" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="laserEnemy" sid="4261634938124029">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="qtde" sid="6354730670407573" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="305386124372852">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="5199538053000148">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2083629168897311" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="destroçoLaser" sid="2722889752362468">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Personagens" plugin-id="Sprite" sid="1646151690626581">
@@ -237,16 +387,27 @@
                 <member>personagemPulo</member>
                 <member>personagemTiro</member>
             </members>
+            <instance-variables>
+                <instance-variable name="life" sid="8995893917448323" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="1540008843663474">
                     <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="3599829090466275">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
         </family>
         <family name="inimigos" plugin-id="Sprite" sid="3814700586246368">
             <members>
+                <member>canhao</member>
                 <member>enemy</member>
+                <member>laserEnemy</member>
             </members>
+            <instance-variables>
+                <instance-variable name="dano" sid="4022340166997667" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="8746734099606555">
                     <behavior id="Pathfinding" />

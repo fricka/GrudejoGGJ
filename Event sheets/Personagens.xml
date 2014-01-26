@@ -32,7 +32,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2959136358994504" title="Movimento Pers.Tiro">
+        <event-group description="" sid="2959136358994504" title="Movimento Pers.Tiro">
             <sub-events>
                 <event-block sid="9696763462855552">
                     <conditions>
@@ -68,7 +68,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="1916758907762866" title="Atirar">
             <sub-events>
-                <event-block collapsed="1" sid="4632968694387038">
+                <event-block sid="4632968694387038">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="5262026769828763" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
@@ -134,6 +134,24 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block any="1" sid="2873669801477881">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9795002140942625" type="laser">
+                            <param id="0" name="Object">FundoPretp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="5301604735647199" type="laser">
+                            <param id="0" name="Object">destroçoLaser</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6277981295879616" type="destroçoLaser">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4832730873235934" type="laser" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="3199733301446769" title="Pulo">
@@ -150,19 +168,34 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1067303298562679" title="Morte">
+        <event-group description="" sid="1067303298562679" title="Morte">
             <sub-events>
                 <event-block sid="2378074441439772">
                     <conditions>
                         <condition id="-3" inverted="1" name="Is on-screen" sid="3075379184141982" type="Personagens" />
                     </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="8568545296681648" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-26" name="Restart layout" sid="4830546495338807" type="System" />
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block any="1" sid="4834973126512052">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3830401139779241" type="System">
+                                    <param id="0" name="First value">LayoutAngle</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="4914335790127835" type="System">
+                                    <param id="0" name="First value">LayoutAngle</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="8568545296681648" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="4830546495338807" type="System" />
+                            </actions>
+                        </event-block>
                         <event-block sid="5207560428136836">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4961270052231967" type="System">
@@ -173,6 +206,62 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="2334187166405756" type="Function">
+                                    <param id="0" name="Name">&quot;trocaAgua&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3717757760383639">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2667611460198772" type="Personagens">
+                            <param id="0" name="Object">inimigos</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="2656648995515847" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="829957983897025" type="inimigos" />
+                        <action id="-10" name="Set value" sid="3205457052444095" type="Personagens">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Value">self.life-inimigos.dano</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="9258775937107573" type="Personagens">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4575262025121265">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1996909945736532" type="Personagens">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2954374204434788" type="Personagens" />
+                        <action id="-16" name="Wait" sid="7429411025721593" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="95549160150058" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="7503894397184906" type="System" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="112678435359514">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6977327945748346" type="System">
+                                    <param id="0" name="First value">LayoutAngle</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2281944612517123" type="Function">
                                     <param id="0" name="Name">&quot;trocaAgua&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>

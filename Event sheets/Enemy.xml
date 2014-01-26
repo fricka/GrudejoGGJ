@@ -37,6 +37,15 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="322859022353905" type="inimigos" />
+                <action id="0" name="Spawn another object" sid="7575884617113756" type="laser">
+                    <param id="0" name="Object">destroçoLaser</param>
+                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="5542026882961186" type="laser" />
+                <action id="-8" name="Set angle" sid="1082743161371122" type="destroçoLaser">
+                    <param id="0" name="Angle">180</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4657637754094634">
@@ -78,6 +87,214 @@
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-group collapsed="1" description="" sid="969343389432748" title="Tiro Canhão">
+            <sub-events>
+                <event-block sid="9708983877036864">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="randomPersonagem" sid="2743733912889555" static="0" type="number">0</variable>
+                        <event-block sid="2668462156618119">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="4883863506306313" type="System">
+                                    <param id="0" name="Interval (seconds)">random(10,20)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3114504490940964" type="System">
+                                    <param id="0" name="Variable">randomPersonagem</param>
+                                    <param id="1" name="Value">floor(random(0,2))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1982704983757923">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="21413782426838" type="System">
+                                            <param id="0" name="Variable">randomPersonagem</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="7527635399682211" type="System">
+                                            <param id="0" name="Object to create">alerta</param>
+                                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                                            <param id="2" name="X">personagemPulo.X +200</param>
+                                            <param id="3" name="Y">personagemPulo.Y</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="2113092018974911" type="alerta">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="2682806588421093" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="2660749442449597" type="alerta" />
+                                        <action id="-3" name="Create object" sid="6365983201164968" type="System">
+                                            <param id="0" name="Object to create">canhao</param>
+                                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                                            <param id="2" name="X">personagemPulo.X+500</param>
+                                            <param id="3" name="Y">alerta.Y</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3920663686573516" type="canhao">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2952831437419041">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2025413575781749" type="System">
+                                            <param id="0" name="Variable">randomPersonagem</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="4687883062487923" type="System">
+                                            <param id="0" name="Object to create">alerta</param>
+                                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                                            <param id="2" name="X">personagemTiro.X+500</param>
+                                            <param id="3" name="Y">personagemTiro.Y</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5855883591881304" type="alerta">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="3047940005377124" type="System">
+                                            <param id="0" name="Seconds">2</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="9189366077212344" type="alerta" />
+                                        <action id="-3" name="Create object" sid="826657795142536" type="System">
+                                            <param id="0" name="Object to create">canhao</param>
+                                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                                            <param id="2" name="X">personagemTiro.X+500</param>
+                                            <param id="3" name="Y">alerta.Y</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="2878895465189236" type="canhao">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="670322011319801" title="Aviao Tchakabum">
+            <sub-events>
+                <event-block sid="9431271322111778">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2586100691904892" type="laserEnemy">
+                            <param id="0" name="Object">FundoPretp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2051580893689408" type="laserEnemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="8958637928192388">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="7571593577889425" type="turret" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8389714622858546" type="turret">
+                            <param id="0" name="Object">laserEnemy</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7191863987847928">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7858366217643041" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="673863797486356" type="turret">
+                            <param id="0" name="X">aviao.X</param>
+                            <param id="1" name="Y">aviao.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7845738559080296">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="8632151268239029" type="Keyboard">
+                            <param id="0" name="Key">49 (1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4849237520765764" type="Function">
+                            <param id="0" name="Name">&quot;spawnAviao&quot;</param>
+                            <param id="1" name="Parameter {n}">floor(random(0,2))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="2043432149057194">
+            <conditions>
+                <condition id="0" name="On function" sid="4703289909926395" type="Function">
+                    <param id="0" name="Name">&quot;spawnAviao&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7739506158008743">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9506619400047036" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="9974782829067664" type="System">
+                            <param id="0" name="Object to create">aviao</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">600</param>
+                            <param id="3" name="Y">25</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7742211287196442" type="aviao">
+                            <param id="0" name="Object">turret</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Turret" id="1" name="Add object to target" sid="3899554321646896" type="turret">
+                            <param id="0" name="Target">personagemPulo</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6298198613054626" type="aviao">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9922964072629742">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7153260263782764" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5911059833739191" type="System">
+                            <param id="0" name="Object to create">aviao</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">600</param>
+                            <param id="3" name="Y">456</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1013581361424374" type="aviao">
+                            <param id="0" name="Object">turret</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6673396014020681" type="aviao">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="Turret" id="1" name="Add object to target" sid="1522401781429953" type="turret">
+                            <param id="0" name="Target">personagemTiro</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

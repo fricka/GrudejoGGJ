@@ -38,7 +38,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="5478079036861174">
+        <event-block any="1" disabled="1" sid="5478079036861174">
             <conditions>
                 <condition id="1" name="On any key pressed" sid="8389266792177917" type="Keyboard" />
                 <condition id="8" name="On any button pressed" sid="533501610737421" type="Gamepad">
