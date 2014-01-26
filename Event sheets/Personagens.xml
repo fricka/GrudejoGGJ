@@ -191,7 +191,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1067303298562679" title="Morte">
+        <event-group description="" sid="1067303298562679" title="Morte">
             <sub-events>
                 <event-block sid="2378074441439772">
                     <conditions>
@@ -238,10 +238,9 @@
                 </event-block>
                 <event-block sid="3717757760383639">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="2667611460198772" type="Personagens">
+                        <condition id="0" name="On collision with another object" sid="2667611460198772" type="Personagens">
                             <param id="0" name="Object">inimigos</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="2656648995515847" type="System" />
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="7218601749771157" type="personagemPulo">
