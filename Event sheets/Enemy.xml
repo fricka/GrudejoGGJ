@@ -94,7 +94,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" inactive="1" sid="969343389432748" title="canhao">
+        <event-group description="" inactive="1" sid="969343389432748" title="canhao">
             <sub-events>
                 <event-block sid="9708983877036864">
                     <conditions />
@@ -126,8 +126,13 @@
                                         <action id="-3" name="Create object" sid="7527635399682211" type="System">
                                             <param id="0" name="Object to create">alerta</param>
                                             <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                                            <param id="2" name="X">personagemPulo.X +200</param>
+                                            <param id="2" name="X">personagemPulo.X </param>
                                             <param id="3" name="Y">personagemPulo.Y</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="1140680503464292" type="alerta">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">2</param>
                                         </action>
                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="2113092018974911" type="alerta">
                                             <param id="0" name="Angle">180</param>
@@ -167,11 +172,16 @@
                                         <action id="-3" name="Create object" sid="4687883062487923" type="System">
                                             <param id="0" name="Object to create">alerta</param>
                                             <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                                            <param id="2" name="X">personagemTiro.X+1500</param>
+                                            <param id="2" name="X">personagemTiro.X</param>
                                             <param id="3" name="Y">personagemTiro.Y</param>
                                         </action>
                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="5855883591881304" type="alerta">
                                             <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="5175792432800008" type="alerta">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">2</param>
                                         </action>
                                         <action id="0" name="Call function" sid="7359415404038485" type="Function">
                                             <param id="0" name="Name">&quot;tocaAlerta1&quot;</param>
@@ -318,7 +328,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1716912077765467" title="bolinha do mal">
+        <event-group collapsed="1" description="" sid="1716912077765467" title="bolinha do mal">
             <sub-events>
                 <event-block sid="3631729587769781">
                     <conditions>

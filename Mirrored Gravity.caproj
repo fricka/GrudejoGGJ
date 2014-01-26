@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Base GGJ</name>
+    <name>Mirrored Gravity</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -10,30 +10,30 @@
     <unique-id>32k6e1v84c9oq</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
-        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects>
-        <effect author="Viktor Korsun" id="waterbg">Water background</effect>
         <effect author="Viktor Korsun" id="water">Water</effect>
+        <effect author="Viktor Korsun" id="waterbg">Water background</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -43,21 +43,22 @@
         <height>480</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Scale outer</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
-        <prop name="Orientations">Any</prop>
+        <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="UIobjects">
             <object-type name="FundoPretp" sid="1185731834807758">
                 <plugin id="TiledBg" />
@@ -627,9 +628,17 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7910039265230016" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="4" loop="1" name="gravity" pingpong="0" repeatcount="1" repeatto="0" sid="7910039265230016" speed="12">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" />
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" />
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" />
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" />
+                </animation>
+                <animation framecount="4" loop="1" name="rotate" pingpong="0" repeatcount="1" repeatto="0" sid="101484668512325" speed="12">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" />
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" />
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" />
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -688,6 +697,9 @@
                 </behavior-type>
                 <behavior-type name="DestroyOutsideLayout" sid="4773762490136698">
                     <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="1231696104541169">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -796,6 +808,32 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="textos" sid="1898917960973336">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1622484170937146" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.07" y="0.7" />
+                            <point x="0.5" y="0.45" />
+                            <point x="0.915" y="0.5" />
+                            <point x="0.5" y="0.6" />
+                            <point x="0.07" y="0.3" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="9478661575235567">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7674536556169051" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Personagens" plugin-id="Sprite" sid="1646151690626581">
@@ -841,6 +879,7 @@
     </families>
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
+        <layout>Menu.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>FASE.xml</event-sheet>
@@ -850,6 +889,7 @@
         <event-sheet>PowerUps.xml</event-sheet>
         <event-sheet>Animação.xml</event-sheet>
         <event-sheet>Som.xml</event-sheet>
+        <event-sheet>Menu.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
@@ -876,7 +916,7 @@
             </properties>
         </global-instance>
     </global-instances>
-    <sounds-folder expanded="1">
+    <sounds-folder expanded="0">
         <file name="Ally-Dmg.m4a" />
         <file name="Ally-Dmg.ogg" />
         <file name="Ally-Dmg.wav" />
@@ -924,7 +964,7 @@
         <file name="Background_Music.wav" />
     </sounds-folder>
     <music-folder expanded="1" />
-    <files-folder expanded="1">
+    <files-folder expanded="0">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />

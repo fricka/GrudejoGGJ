@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <variable constant="0" name="powerUpFrame" sid="1006116601673124" static="0" type="number">0</variable>
+        <variable constant="0" name="animation" sid="1006116601673124" static="0" type="number">0</variable>
         <event-block sid="7305410873771421">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2466766436504906" type="System" />
@@ -18,7 +18,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2291539805603383">
+        <event-block collapsed="1" sid="2291539805603383">
             <conditions>
                 <condition id="0" name="On function" sid="541133033119067" type="Function">
                     <param id="0" name="Name">&quot;trocaAgua&quot;</param>
@@ -44,7 +44,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="8995933711778072">
+        <event-block collapsed="1" sid="8995933711778072">
             <conditions>
                 <condition id="0" name="On function" sid="9995206428612162" type="Function">
                     <param id="0" name="Name">&quot;powerUps&quot;</param>
@@ -55,30 +55,74 @@
                     <param id="0" name="Seconds">random(5,10)</param>
                 </action>
                 <action id="-9" name="Set value" sid="4560738975675175" type="System">
-                    <param id="0" name="Variable">powerUpFrame</param>
+                    <param id="0" name="Variable">animation</param>
                     <param id="1" name="Value">floor(random(0,2))</param>
                 </action>
-                <action id="-3" name="Create object" sid="1097382594490852" type="System">
-                    <param id="0" name="Object to create">gravidade</param>
-                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                    <param id="2" name="X">Personagens.X +200</param>
-                    <param id="3" name="Y">random(LayoutHeight)</param>
-                </action>
-                <action id="5" name="Set frame" sid="4356631729007786" type="gravidade">
-                    <param id="0" name="Frame number">powerUpFrame</param>
-                </action>
-                <action id="-24" name="Move to top" sid="8465214126315855" type="gravidade" />
-                <action id="-16" name="Wait" sid="9687520347781177" type="System">
-                    <param id="0" name="Seconds">5</param>
-                </action>
-                <action id="-9" name="Destroy" sid="8346019271627752" type="gravidade" />
-                <action id="0" name="Call function" sid="8546268892763425" type="Function">
-                    <param id="0" name="Name">&quot;powerUps&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="1552760553881446">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="914190301961793" type="System">
+                            <param id="0" name="Variable">animation</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="1097382594490852" type="System">
+                            <param id="0" name="Object to create">gravidade</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Personagens.X +200</param>
+                            <param id="3" name="Y">random(LayoutHeight)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4356631729007786" type="gravidade">
+                            <param id="0" name="Animation">&quot;gravity&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="8465214126315855" type="gravidade" />
+                        <action id="-16" name="Wait" sid="9687520347781177" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8346019271627752" type="gravidade" />
+                        <action id="0" name="Call function" sid="8546268892763425" type="Function">
+                            <param id="0" name="Name">&quot;powerUps&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="503132896738178">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8508947878459969" type="System">
+                            <param id="0" name="Variable">animation</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="3611487747781801" type="System">
+                            <param id="0" name="Object to create">gravidade</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Personagens.X +200</param>
+                            <param id="3" name="Y">random(LayoutHeight)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4584044927648631" type="gravidade">
+                            <param id="0" name="Animation">&quot;rotate&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="4976998715654907" type="gravidade" />
+                        <action id="-16" name="Wait" sid="5891122621127827" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6084919092158349" type="gravidade" />
+                        <action id="0" name="Call function" sid="7224016696553793" type="Function">
+                            <param id="0" name="Name">&quot;powerUps&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
-        <event-block sid="2574777783858193">
+        <event-block collapsed="1" sid="2574777783858193">
             <conditions>
                 <condition id="0" name="On function" sid="9826265538318533" type="Function">
                     <param id="0" name="Name">&quot;inverterGravidade&quot;</param>
@@ -130,7 +174,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="6481072303651801">
+        <event-block collapsed="1" sid="6481072303651801">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="7776229300274372" type="Personagens">
                     <param id="0" name="Object">gravidade</param>
@@ -140,9 +184,8 @@
             <sub-events>
                 <event-block sid="5933716235457641">
                     <conditions>
-                        <condition id="3" name="Compare frame" sid="8956287094626663" type="gravidade">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Number">0</param>
+                        <condition id="2" name="Is playing" sid="8956287094626663" type="gravidade">
+                            <param id="0" name="Animation">&quot;gravity&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -172,9 +215,8 @@
                 </event-block>
                 <event-block sid="4242273896129279">
                     <conditions>
-                        <condition id="3" name="Compare frame" sid="7734379458922441" type="gravidade">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Number">1</param>
+                        <condition id="2" name="Is playing" sid="7734379458922441" type="gravidade">
+                            <param id="0" name="Animation">&quot;rotate&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -196,7 +238,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" inactive="1" sid="773430341751505" title="virar">
+        <event-group collapsed="1" description="" inactive="1" sid="773430341751505" title="virar">
             <sub-events>
                 <event-block sid="4824852042141498">
                     <conditions>
