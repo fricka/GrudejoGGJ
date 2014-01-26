@@ -91,7 +91,17 @@
                     <param id="0" name="Width">random(32,256)</param>
                     <param id="1" name="Height">random(32,256)</param>
                 </action>
-                <action id="-24" name="Move to top" sid="8858780414729018" type="Personagens" />
+                <action id="0" name="Spawn another object" sid="5910541365844341" type="spawnador2">
+                    <param id="0" name="Object">FundoPretp2</param>
+                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="5776622012021662" type="FundoPretp2">
+                    <param id="0" name="Width">random(32,64)</param>
+                    <param id="1" name="Height">random(128,256)</param>
+                </action>
+                <action id="-24" name="Move to top" sid="8858780414729018" type="inimigos" />
+                <action id="-24" name="Move to top" sid="1199238066232721" type="Personagens" />
             </actions>
         </event-block>
         <event-block sid="6293689686766648">
@@ -103,6 +113,21 @@
             <actions>
                 <action id="-2" name="Set Y" sid="4749051247731703" type="gravidade">
                     <param id="0" name="Y">random(LayoutHeight)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2096642941173128">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8317490876866504" type="laser">
+                    <param id="0" name="Object">FundoPretp2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4100780544911794" type="FundoPretp2" />
+                <action id="0" name="Spawn another object" sid="1507581494115455" type="laser">
+                    <param id="0" name="Object">destroçoParede</param>
+                    <param id="1" name="Layer">&quot;Div&quot;</param>
+                    <param id="2" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>

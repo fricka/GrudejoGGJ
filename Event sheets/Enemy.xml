@@ -45,7 +45,7 @@
         </event-block>
         <event-block sid="1017710850381306">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="7970857044418753" type="laser">
+                <condition id="1" name="Is overlapping another object" sid="7970857044418753" type="laser">
                     <param id="0" name="Object">inimigos</param>
                 </condition>
             </conditions>
@@ -54,7 +54,10 @@
                 <action id="0" name="Spawn another object" sid="7575884617113756" type="laser">
                     <param id="0" name="Object">destroçoLaser</param>
                     <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">0 + enemy.Width/2</param>
+                </action>
+                <action id="2" name="Set spray cone" sid="1355370493302508" type="destroçoLaser">
+                    <param id="0" name="Spray cone">360</param>
                 </action>
                 <action id="-9" name="Destroy" sid="5542026882961186" type="laser" />
                 <action id="-8" name="Set angle" sid="1082743161371122" type="destroçoLaser">
@@ -91,7 +94,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" inactive="1" sid="969343389432748" title="canhao">
+        <event-group description="" inactive="1" sid="969343389432748" title="canhao">
             <sub-events>
                 <event-block sid="9708983877036864">
                     <conditions />
