@@ -2,5 +2,182 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Som</name>
-    <events />
+    <events>
+        <event-block sid="1870872743246086">
+            <conditions>
+                <condition behavior="Platform" id="5" name="On jump" sid="6207232713487694" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="5445008785927303" type="Audio">
+                    <param id="0" name="Audio file">Jump</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-30</param>
+                    <param id="1" name="Tag (optional)">&quot;jump&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3775090037597019">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="694713104333514" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="5120512067758123" type="Audio">
+                    <param id="0" name="Audio file">Land</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-30</param>
+                    <param id="1" name="Tag (optional)">&quot;aterrissar&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8965214756726184">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9216504080331281" type="laser">
+                    <param id="0" name="Object">inimigos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="4465507536670383" type="Audio">
+                    <param id="0" name="Audio file">Enemy_Dmg</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;enemy_Dmg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7549369386009363">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9304856036213342" type="Personagens">
+                    <param id="0" name="Object">inimigos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="415836390656574" type="Audio">
+                    <param id="0" name="Audio file">Ally-Dmg</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;ally_Dmg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7330740977715418">
+            <conditions>
+                <condition id="0" name="On function" sid="3109442105752048" type="Function">
+                    <param id="0" name="Name">&quot;spawnaBolinha&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="6526492059523423" type="Audio">
+                    <param id="0" name="Audio file">Enemy_Spawn1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-30</param>
+                    <param id="1" name="Tag (optional)">&quot;spawnBola&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4399726719487453">
+            <conditions>
+                <condition id="0" name="On function" sid="5347182869862233" type="Function">
+                    <param id="0" name="Name">&quot;onSomRotacionaTela&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="2190294953810145" type="Audio">
+                    <param id="0" name="Audio file">Reverse_Screen</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;giraTela&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2763103737891554">
+            <conditions>
+                <condition id="0" name="On function" sid="3211104137863586" type="Function">
+                    <param id="0" name="Name">&quot;tocaGravidade1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="6757597081861083" type="Audio">
+                    <param id="0" name="Audio file">Gravity_Screw1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-25</param>
+                    <param id="1" name="Tag (optional)">&quot;giraTela&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4058077680890007">
+            <conditions>
+                <condition id="0" name="On function" sid="1257761336302609" type="Function">
+                    <param id="0" name="Name">&quot;tocaGravidade2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="5997555991210467" type="Audio">
+                    <param id="0" name="Audio file">Gravity_Screw2</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-25</param>
+                    <param id="1" name="Tag (optional)">&quot;giraTela&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9664700713338566">
+            <conditions>
+                <condition id="0" name="On function" sid="4486998891300111" type="Function">
+                    <param id="0" name="Name">&quot;tocaTiro&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="8566842707776153" type="Audio">
+                    <param id="0" name="Audio file">Gun_Shot(Ally)</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0-25</param>
+                    <param id="1" name="Tag (optional)">&quot;tiro&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3316205688016589">
+            <conditions>
+                <condition id="0" name="On function" sid="4894239179834459" type="Function">
+                    <param id="0" name="Name">&quot;tocaAlerta1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="3751430346123101" type="Audio">
+                    <param id="0" name="Audio file">Missile Alert</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;alerta&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7047405085382199">
+            <conditions>
+                <condition id="0" name="On function" sid="1437379591518904" type="Function">
+                    <param id="0" name="Name">&quot;tocaMissil&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="4077188119549701" type="Audio">
+                    <param id="0" name="Audio file">Missile Launch</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;lançaMissil&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1870215639255818">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1308154516044193" type="canhao">
+                    <param id="0" name="Object">Personagens</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="9241923640331116" type="Audio">
+                    <param id="0" name="Audio file">Missile Explosion</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;missilHit&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
