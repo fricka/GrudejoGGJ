@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Animação</name>
+    <events>
+        <event-block sid="4492117040515193">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="2056077290163658" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3480970341638089" type="Personagens">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4367085415768239">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="6297301134515508" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8765635730303119" type="Personagens">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7206927923462059">
+            <conditions>
+                <condition behavior="Platform" id="5" name="On jump" sid="4129845938564299" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5824073196697319" type="Personagens">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7252062710727616">
+            <conditions>
+                <condition behavior="Platform" id="6" name="On fall" sid="8447158167723219" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8328983661302596" type="Personagens">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

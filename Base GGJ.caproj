@@ -10,29 +10,29 @@
     <unique-id>32k6e1v84c9oq</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
-        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
-        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
-        <effect author="Viktor Korsun" id="water">Water</effect>
         <effect author="Viktor Korsun" id="waterbg">Water background</effect>
+        <effect author="Viktor Korsun" id="water">Water</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -56,7 +56,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="UIobjects">
             <object-type name="FundoPretp" sid="1185731834807758">
                 <plugin id="TiledBg" />
@@ -95,7 +95,7 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2856874649053025" speed="5">
+                    <animation framecount="1" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="2856874649053025" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
@@ -107,7 +107,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="correndo" pingpong="0" repeatcount="1" repeatto="0" sid="8811011549471871" speed="12">
+                    <animation framecount="3" loop="1" name="andando" pingpong="0" repeatcount="1" repeatto="0" sid="8811011549471871" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
@@ -270,6 +270,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="1" repeatto="0" sid="9405557417130398" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="personagemTiro" sid="5040384495151055">
@@ -398,6 +401,9 @@
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="1" repeatto="0" sid="549747903306464" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -748,15 +754,17 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>FASE.xml</event-sheet>
         <event-sheet>Personagens.xml</event-sheet>
         <event-sheet>Joystick.xml</event-sheet>
         <event-sheet>Enemy.xml</event-sheet>
         <event-sheet>PowerUps.xml</event-sheet>
+        <event-sheet>Animação.xml</event-sheet>
+        <event-sheet>Som.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
@@ -768,7 +776,50 @@
         <global-instance type="Function" uid="10" />
         <global-instance type="Browser" uid="14" />
     </global-instances>
-    <sounds-folder expanded="1" />
+    <sounds-folder expanded="1">
+        <file name="Ally-Dmg.m4a" />
+        <file name="Ally-Dmg.ogg" />
+        <file name="Ally-Dmg.wav" />
+        <file name="Enemy_Dmg.m4a" />
+        <file name="Enemy_Dmg.ogg" />
+        <file name="Enemy_Dmg.wav" />
+        <file name="Enemy_Spawn1.m4a" />
+        <file name="Enemy_Spawn1.ogg" />
+        <file name="Enemy_Spawn1.wav" />
+        <file name="Enemy_Spawn2.m4a" />
+        <file name="Enemy_Spawn2.ogg" />
+        <file name="Enemy_Spawn2.wav" />
+        <file name="Gravity_Screw1.m4a" />
+        <file name="Gravity_Screw1.ogg" />
+        <file name="Gravity_Screw1.wav" />
+        <file name="Gravity_Screw2.m4a" />
+        <file name="Gravity_Screw2.ogg" />
+        <file name="Gravity_Screw2.wav" />
+        <file name="Gun_Shot(Ally).m4a" />
+        <file name="Gun_Shot(Ally).ogg" />
+        <file name="Gun_Shot(Ally).wav" />
+        <file name="Gun_Shot(Enemy Ship).m4a" />
+        <file name="Gun_Shot(Enemy Ship).ogg" />
+        <file name="Gun_Shot(Enemy Ship).wav" />
+        <file name="Jump.m4a" />
+        <file name="Jump.ogg" />
+        <file name="Jump.wav" />
+        <file name="Land.m4a" />
+        <file name="Land.ogg" />
+        <file name="Land.wav" />
+        <file name="Missile Alert.m4a" />
+        <file name="Missile Alert.ogg" />
+        <file name="Missile Alert.wav" />
+        <file name="Missile Explosion.m4a" />
+        <file name="Missile Explosion.ogg" />
+        <file name="Missile Explosion.wav" />
+        <file name="Missile Launch.m4a" />
+        <file name="Missile Launch.ogg" />
+        <file name="Missile Launch.wav" />
+        <file name="Reverse_Screen.m4a" />
+        <file name="Reverse_Screen.ogg" />
+        <file name="Reverse_Screen.wav" />
+    </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">

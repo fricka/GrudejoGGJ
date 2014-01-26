@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FASE</name>
     <events>
+        <include>Animação</include>
         <variable constant="0" name="trocaAgua" sid="3096158716242891" static="0" type="number">0</variable>
         <include>PowerUps</include>
         <include>Enemy</include>
