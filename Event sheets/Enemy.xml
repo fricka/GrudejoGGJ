@@ -94,7 +94,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" inactive="1" sid="969343389432748" title="canhao">
+        <event-group collapsed="1" description="" inactive="1" sid="969343389432748" title="canhao">
             <sub-events>
                 <event-block sid="9708983877036864">
                     <conditions />
@@ -243,7 +243,7 @@
                                 <action id="0" name="Spawn another object" sid="7742211287196442" type="aviao">
                                     <param id="0" name="Object">turret</param>
                                     <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                                    <param id="2" name="Image point">0</param>
+                                    <param id="2" name="Image point">1</param>
                                 </action>
                                 <action behavior="Turret" id="1" name="Add object to target" sid="3899554321646896" type="turret">
                                     <param id="0" name="Target">personagemPulo</param>
@@ -271,7 +271,7 @@
                                 <action id="0" name="Spawn another object" sid="1013581361424374" type="aviao">
                                     <param id="0" name="Object">turret</param>
                                     <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                                    <param id="2" name="Image point">0</param>
+                                    <param id="2" name="Image point">1</param>
                                 </action>
                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="6673396014020681" type="aviao">
                                     <param id="0" name="Angle">180</param>
@@ -301,7 +301,7 @@
                         <action id="0" name="Spawn another object" sid="8389714622858546" type="turret">
                             <param id="0" name="Object">laserEnemy</param>
                             <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
                     </actions>
                 </event-block>
