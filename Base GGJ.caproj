@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -56,7 +57,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-folder expanded="0" name="UIobjects">
             <object-type name="FundoPretp" sid="1185731834807758">
                 <plugin id="TiledBg" />
@@ -95,15 +96,29 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
-                    <animation framecount="1" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="2856874649053025" speed="5">
+                    <animation framecount="3" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="2856874649053025" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
-                                <point x="0.699219" y="1" />
-                                <point x="0.242188" y="1" />
-                                <point x="0.335938" y="0.410156" />
-                                <point x="0.523438" y="0.224609" />
-                                <point x="0.789063" y="0.476563" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -136,16 +151,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="pulando" pingpong="0" repeatcount="1" repeatto="1" sid="9535344832160227" speed="12">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Tiro" x="0.921875" y="0.421875" />
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="2" loop="0" name="pulando" pingpong="0" repeatcount="1" repeatto="1" sid="9535344832160227" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Tiro" x="0.921875" y="0.421875" />
                             <collision-poly>
@@ -271,7 +277,18 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="1" repeatto="0" sid="9405557417130398" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.796875" y="0.5" />
+                                <point x="0.671875" y="0.671875" />
+                                <point x="0.5" y="0.765625" />
+                                <point x="0.421875" y="0.578125" />
+                                <point x="0.375" y="0.5" />
+                                <point x="0.40625" y="0.40625" />
+                                <point x="0.5" y="0.328125" />
+                                <point x="0.71875" y="0.28125" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -404,7 +421,18 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="1" repeatto="0" sid="549747903306464" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.8125" y="0.5" />
+                                <point x="0.703125" y="0.703125" />
+                                <point x="0.5" y="0.96875" />
+                                <point x="0.265625" y="0.734375" />
+                                <point x="0.0625" y="0.5" />
+                                <point x="0.15625" y="0.15625" />
+                                <point x="0.5" y="0.03125" />
+                                <point x="0.765625" y="0.234375" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -713,6 +741,9 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
+        <object-type name="Audio" sid="7815569661009617">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Personagens" plugin-id="Sprite" sid="1646151690626581">
@@ -775,6 +806,21 @@
         </global-instance>
         <global-instance type="Function" uid="10" />
         <global-instance type="Browser" uid="14" />
+        <global-instance type="Audio" uid="29">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1">
         <file name="Ally-Dmg.m4a" />

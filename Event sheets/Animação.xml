@@ -42,7 +42,18 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="8328983661302596" type="Personagens">
-                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="0" name="Animation">&quot;caindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="5544738997902876">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="89651121170598" type="Personagens" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1656253852119677" type="Personagens">
+                    <param id="0" name="Animation">&quot;idle&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
