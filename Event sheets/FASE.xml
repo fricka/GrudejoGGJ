@@ -20,50 +20,55 @@
                     <param id="0" name="Width">LayoutWidth</param>
                 </action>
                 <action id="-1" name="Set X" sid="6065563565284943" type="FundoPretp">
-                    <param id="0" name="X">LayoutWidth/2</param>
+                    <param id="0" name="X">LayoutWidth/2-20</param>
                 </action>
                 <action id="-5" name="Set width" sid="2970303354867539" type="FundoPretp">
-                    <param id="0" name="Width">LayoutWidth</param>
+                    <param id="0" name="Width">LayoutWidth+100</param>
                 </action>
                 <action id="-5" name="Set width" sid="557510506513366" type="AguaBaixo">
                     <param id="0" name="Width">LayoutWidth</param>
                 </action>
-                <action id="-27" name="Set effect enabled" sid="4189456526172821" type="AguaCima">
-                    <param id="0" name="Mode">0</param>
-                    <param id="1" name="Effect">&quot;Water&quot;</param>
-                </action>
                 <action id="-27" name="Set effect enabled" sid="2717455608745936" type="TiledBackgroundCima">
                     <param id="0" name="Mode">0</param>
                     <param id="1" name="Effect">&quot;WaterBackground&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9834203328350591" type="gravidade" />
+            </actions>
+        </event-block>
+        <event-block sid="3594057898741649">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="9444752880331741" type="Barras">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="8632832099340433" type="Barras">
+                    <param id="0" name="Width">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1070249505121005">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="8174947413762683" type="9patch">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="1039474710574355" type="9patch">
+                    <param id="0" name="Width">0</param>
                 </action>
             </actions>
         </event-block>
         <event-block any="1" disabled="1" sid="5478079036861174">
             <conditions>
                 <condition id="1" name="On any key pressed" sid="8389266792177917" type="Keyboard" />
-                <condition id="8" name="On any button pressed" sid="533501610737421" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                </condition>
-                <condition id="8" name="On any button pressed" sid="6886112638748748" type="Gamepad">
-                    <param id="0" name="Gamepad">1</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="10" name="Request fullscreen" sid="3490602180801791" type="Browser">
                     <param id="0" name="Mode">3</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="9708745016640734">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="7160678043113329" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="9296534512308413" type="spawnador2">
-                    <param id="0" name="X">Personagens.X + 800</param>
-                    <param id="1" name="Y">240</param>
-                </action>
-                <action id="-24" name="Move to top" sid="8858780414729018" type="Personagens" />
             </actions>
         </event-block>
         <event-block sid="1184931963607013">
@@ -73,6 +78,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-3" name="Set position" sid="9296534512308413" type="spawnador2">
+                    <param id="0" name="X">Personagens.X + 1366</param>
+                    <param id="1" name="Y">240</param>
+                </action>
                 <action id="0" name="Spawn another object" sid="8560892878524797" type="spawnador2">
                     <param id="0" name="Object">FundoPretp</param>
                     <param id="1" name="Layer">&quot;Personagens&quot;</param>
@@ -82,30 +91,18 @@
                     <param id="0" name="Width">random(32,256)</param>
                     <param id="1" name="Height">random(32,256)</param>
                 </action>
+                <action id="-24" name="Move to top" sid="8858780414729018" type="Personagens" />
             </actions>
         </event-block>
-        <event-block sid="2026320950953402">
+        <event-block sid="6293689686766648">
             <conditions>
-                <condition id="0" name="On key pressed" sid="977426817019883" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                <condition id="1" name="Is overlapping another object" sid="1671790156100604" type="gravidade">
+                    <param id="0" name="Object">FundoPretp</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="1811137671346185" type="Function">
-                    <param id="0" name="Name">&quot;trocaAgua&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6514625321247088">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="333272041605818" type="Keyboard">
-                    <param id="0" name="Key">13 (Return)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="5" name="Set gravity" sid="6468754505843775" type="Personagens">
-                    <param id="0" name="Gravity">Self.Platform.Gravity * -1</param>
+                <action id="-2" name="Set Y" sid="4749051247731703" type="gravidade">
+                    <param id="0" name="Y">random(LayoutHeight)</param>
                 </action>
             </actions>
         </event-block>

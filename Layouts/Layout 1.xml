@@ -4,7 +4,7 @@
     <sid>4007695377652145</sid>
     <event-sheet>FASE</event-sheet>
     <size>
-        <width>8000</width>
+        <width>30000</width>
         <height>480</height>
     </size>
     <margins>
@@ -142,6 +142,31 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>50</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -165,7 +190,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <dano>50</dano>
+                        <dano>30</dano>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -286,7 +311,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <dano>20</dano>
+                        <dano>10</dano>
                         <qtde>0</qtde>
                     </instance-variables>
                     <behavior-instances>
@@ -420,8 +445,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>70</x>
-                        <y>198</y>
+                        <x>66</x>
+                        <y>42</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -486,7 +511,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <dano>20</dano>
+                        <dano>50</dano>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -501,6 +526,19 @@
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>10</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -521,7 +559,7 @@
                 </instance>
                 <instance type="spawnador" uid="13">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -543,7 +581,7 @@
                 </instance>
                 <instance type="spawnador2" uid="15">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -747,11 +785,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>400</x>
+                        <x>252</x>
                         <y>240</y>
                         <z>0</z>
-                        <width>800</width>
-                        <height>25</height>
+                        <width>1096</width>
+                        <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -762,15 +800,102 @@
             </instances>
             <effects />
         </layer>
+        <layer name="HUD" sid="7614273639760556">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="9patch" uid="28">
+                    <properties>
+                        <left-margin>1</left-margin>
+                        <right-margin>1</right-margin>
+                        <top-margin>1</top-margin>
+                        <bottom-margin>1</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>57</x>
+                        <y>231</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>18</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="9patch2" uid="20">
+                    <properties>
+                        <left-margin>1</left-margin>
+                        <right-margin>1</right-margin>
+                        <top-margin>1</top-margin>
+                        <bottom-margin>1</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>531</x>
+                        <y>231</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>18</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="9patch3" uid="25">
+                    <properties>
+                        <left-margin>1</left-margin>
+                        <right-margin>1</right-margin>
+                        <top-margin>1</top-margin>
+                        <bottom-margin>1</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>294</x>
+                        <y>231</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>18</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="powerUps" uid="20">
-            <properties>
-                <width>2</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

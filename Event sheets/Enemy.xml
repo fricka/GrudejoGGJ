@@ -3,29 +3,43 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Enemy</name>
     <events>
-        <event-block sid="3631729587769781">
+        <variable constant="0" name="dificulcade" sid="199042894041965" static="0" type="number">1</variable>
+        <event-block sid="3285268490337414">
             <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="1510558733877833" type="inimigos" />
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="7387219806340039" type="inimigos" />
-            </actions>
-        </event-block>
-        <event-block sid="2339105837743483">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="1392472546080877" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
+                <condition id="-6" name="Every X seconds" sid="6410409914366737" type="System">
+                    <param id="0" name="Interval (seconds)">16</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="7139321360908151" type="spawnador">
-                    <param id="0" name="Object">enemy</param>
-                    <param id="1" name="Layer">Self.LayerName</param>
-                    <param id="2" name="Image point">0</param>
+                <action id="-12" name="Set group active" sid="3359877182137373" type="System">
+                    <param id="0" name="Group name">&quot;canhao&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="7565001170325209" type="inimigos">
-                    <param id="0" name="X">Personagens.X</param>
-                    <param id="1" name="Y">Personagens.Y</param>
+            </actions>
+        </event-block>
+        <event-block sid="7028455315945848">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5149771903407694" type="System">
+                    <param id="0" name="Interval (seconds)">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="2486027558101647" type="System">
+                    <param id="0" name="Group name">&quot;aviao&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="762758251245415">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6774829435003608" type="System">
+                    <param id="0" name="Interval (seconds)">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="4007125751884772" type="System">
+                    <param id="0" name="Variable">dificulcade</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -45,17 +59,6 @@
                 <action id="-9" name="Destroy" sid="5542026882961186" type="laser" />
                 <action id="-8" name="Set angle" sid="1082743161371122" type="destroçoLaser">
                     <param id="0" name="Angle">180</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4657637754094634">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="4003673185242425" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="3723883490373176" type="spawnador">
-                    <param id="0" name="X">Personagens.X + 800</param>
-                    <param id="1" name="Y">random(layoutHeight)</param>
                 </action>
             </actions>
         </event-block>
@@ -88,7 +91,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="969343389432748" title="Tiro Canhão">
+        <event-group collapsed="1" description="" inactive="1" sid="969343389432748" title="canhao">
             <sub-events>
                 <event-block sid="9708983877036864">
                     <conditions />
@@ -98,7 +101,7 @@
                         <event-block sid="2668462156618119">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="4883863506306313" type="System">
-                                    <param id="0" name="Interval (seconds)">random(10,20)</param>
+                                    <param id="0" name="Interval (seconds)">random(4,9)/dificulcade</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -180,8 +183,87 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="670322011319801" title="Aviao Tchakabum">
+        <event-group collapsed="1" description="" inactive="1" sid="670322011319801" title="aviao">
             <sub-events>
+                <event-block sid="3959497702558906">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="6839973471945008" type="System">
+                            <param id="0" name="Interval (seconds)">random(8,17)/dificulcade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4849237520765764" type="Function">
+                            <param id="0" name="Name">&quot;spawnAviao&quot;</param>
+                            <param id="1" name="Parameter {n}">floor(random(0,2))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2043432149057194">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4703289909926395" type="Function">
+                            <param id="0" name="Name">&quot;spawnAviao&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7739506158008743">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="9506619400047036" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="9974782829067664" type="System">
+                                    <param id="0" name="Object to create">aviao</param>
+                                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                                    <param id="2" name="X">Personagens.X+ 1366</param>
+                                    <param id="3" name="Y">25</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="7742211287196442" type="aviao">
+                                    <param id="0" name="Object">turret</param>
+                                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Turret" id="1" name="Add object to target" sid="3899554321646896" type="turret">
+                                    <param id="0" name="Target">personagemPulo</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6298198613054626" type="aviao">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9922964072629742">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="7153260263782764" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="5911059833739191" type="System">
+                                    <param id="0" name="Object to create">aviao</param>
+                                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                                    <param id="2" name="X">Personagens.X +1366</param>
+                                    <param id="3" name="Y">456</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="1013581361424374" type="aviao">
+                                    <param id="0" name="Object">turret</param>
+                                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6673396014020681" type="aviao">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action behavior="Turret" id="1" name="Add object to target" sid="1522401781429953" type="turret">
+                                    <param id="0" name="Target">personagemTiro</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="9431271322111778">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2586100691904892" type="laserEnemy">
@@ -215,86 +297,55 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7845738559080296">
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="1716912077765467" title="bolinha do mal">
+            <sub-events>
+                <event-block sid="3631729587769781">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="8632151268239029" type="Keyboard">
-                            <param id="0" name="Key">49 (1)</param>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="1510558733877833" type="inimigos" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="7387219806340039" type="inimigos" />
+                    </actions>
+                </event-block>
+                <event-block sid="2339105837743483">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="1392472546080877" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,5)/dificulcade</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="4849237520765764" type="Function">
-                            <param id="0" name="Name">&quot;spawnAviao&quot;</param>
-                            <param id="1" name="Parameter {n}">floor(random(0,2))</param>
+                        <action id="-3" name="Set position" sid="3723883490373176" type="spawnador">
+                            <param id="0" name="X">Personagens.X + 800</param>
+                            <param id="1" name="Y">random(layoutHeight)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7139321360908151" type="spawnador">
+                            <param id="0" name="Object">enemy</param>
+                            <param id="1" name="Layer">Self.LayerName</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="7565001170325209" type="inimigos">
+                            <param id="0" name="X">Personagens.X</param>
+                            <param id="1" name="Y">Personagens.Y</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1038337462012961">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="9766254736095628" type="spawnador">
+                                    <param id="0" name="Object">FundoPretp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="2873610190615182" type="spawnador">
+                                    <param id="0" name="Y">random(LayoutHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="2043432149057194">
-            <conditions>
-                <condition id="0" name="On function" sid="4703289909926395" type="Function">
-                    <param id="0" name="Name">&quot;spawnAviao&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="7739506158008743">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="9506619400047036" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="9974782829067664" type="System">
-                            <param id="0" name="Object to create">aviao</param>
-                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                            <param id="2" name="X">600</param>
-                            <param id="3" name="Y">25</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="7742211287196442" type="aviao">
-                            <param id="0" name="Object">turret</param>
-                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action behavior="Turret" id="1" name="Add object to target" sid="3899554321646896" type="turret">
-                            <param id="0" name="Target">personagemPulo</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6298198613054626" type="aviao">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9922964072629742">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="7153260263782764" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="5911059833739191" type="System">
-                            <param id="0" name="Object to create">aviao</param>
-                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                            <param id="2" name="X">600</param>
-                            <param id="3" name="Y">456</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="1013581361424374" type="aviao">
-                            <param id="0" name="Object">turret</param>
-                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6673396014020681" type="aviao">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                        <action behavior="Turret" id="1" name="Add object to target" sid="1522401781429953" type="turret">
-                            <param id="0" name="Target">personagemTiro</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
     </events>
 </c2eventsheet>

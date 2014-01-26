@@ -32,7 +32,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2959136358994504" title="Movimento Pers.Tiro">
+        <event-group collapsed="1" description="" sid="2959136358994504" title="Movimento Pers.Tiro">
             <sub-events>
                 <event-block sid="9696763462855552">
                     <conditions>
@@ -66,7 +66,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1916758907762866" title="Atirar">
+        <event-group description="" sid="1916758907762866" title="Atirar">
             <sub-events>
                 <event-block sid="4632968694387038">
                     <conditions>
@@ -78,10 +78,9 @@
                     <sub-events>
                         <event-block sid="669046902797568">
                             <conditions>
-                                <condition disabled="1" id="-14" name="Compare variable" sid="8707817307543496" type="System">
-                                    <param id="0" name="Variable">qtdeTiros</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-5" name="Compare width" sid="2602289340093535" type="9patch3">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Width">20</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -100,9 +99,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Subtract from" sid="7125627145685268" type="System">
-                            <param id="0" name="Variable">qtdeTiros</param>
-                            <param id="1" name="Value">2</param>
+                        <action id="-5" name="Set width" sid="2878405842941412" type="9patch3">
+                            <param id="0" name="Width">Self.Width -20</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -154,21 +152,36 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3199733301446769" title="Pulo">
+        <event-group description="" sid="3199733301446769" title="Pulo">
             <sub-events>
-                <event-block sid="6055758100539027">
+                <event-block sid="1184297932176571">
                     <conditions>
-                        <condition behavior="Platform" id="3" name="Is jumping" sid="8126717013702764" type="personagemPulo" />
+                        <condition id="-5" name="Compare width" sid="3896762607143484" type="9patch2">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Width">20</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="2025501630114534" type="personagemTiro">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6055758100539027">
+                            <conditions>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="8126717013702764" type="personagemPulo" />
+                                <condition id="-4" name="Trigger once while true" sid="4845506496755528" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="2025501630114534" type="personagemTiro">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="562094185890006" type="9patch2">
+                                    <param id="0" name="Width">Self.Width -20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1067303298562679" title="Morte">
+        <event-group collapsed="1" description="" sid="1067303298562679" title="Morte">
             <sub-events>
                 <event-block sid="2378074441439772">
                     <conditions>
@@ -222,7 +235,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="829957983897025" type="inimigos" />
-                        <action id="-10" name="Set value" sid="3205457052444095" type="Personagens">
+                        <action disabled="1" id="-10" name="Set value" sid="3205457052444095" type="Personagens">
                             <param id="0" name="Instance variable">life</param>
                             <param id="1" name="Value">self.life-inimigos.dano</param>
                         </action>
@@ -231,14 +244,16 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
+                        <action id="-5" name="Set width" sid="9875454229421701" type="9patch">
+                            <param id="0" name="Width">self.Width - inimigos.dano</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4575262025121265">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1996909945736532" type="Personagens">
-                            <param id="0" name="Instance variable">life</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="-5" name="Compare width" sid="1996909945736532" type="9patch">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Width">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -248,6 +263,10 @@
                         </action>
                         <action id="-16" name="Wait" sid="95549160150058" type="System">
                             <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3178848034714037" type="System">
+                            <param id="0" name="Variable">dificulcade</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="-26" name="Restart layout" sid="7503894397184906" type="System" />
                     </actions>
@@ -271,5 +290,28 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="938986424153709">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3501894653708618" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9825633549029524">
+                    <conditions>
+                        <condition id="-5" name="Compare width" sid="2569924566626858" type="Barras">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Width">195</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="1561522393793241" type="Barras">
+                            <param id="0" name="Width">self.Width+5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

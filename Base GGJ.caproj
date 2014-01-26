@@ -10,10 +10,10 @@
     <unique-id>32k6e1v84c9oq</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -24,6 +24,7 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -45,7 +46,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Scale outer</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
@@ -55,7 +56,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-folder expanded="0" name="UIobjects">
             <object-type name="FundoPretp" sid="1185731834807758">
                 <plugin id="TiledBg" />
@@ -75,17 +76,8 @@
                 </effects>
                 <texture />
             </object-type>
-            <object-type name="AguaCima" sid="8637586830009711">
-                <plugin id="TiledBg" />
-                <effects>
-                    <effect-type name="Water">
-                        <effect id="water" />
-                    </effect-type>
-                </effects>
-                <texture />
-            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Perosnagens">
+        <object-folder expanded="0" name="Perosnagens">
             <object-type name="personagemPulo" sid="5825933759978601">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -175,6 +167,11 @@
         </object-type>
         <object-type name="enemy" sid="5439221513035099">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="9987105565934986">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="7" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="7988324840061357" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -287,15 +284,20 @@
         </object-type>
         <object-type name="gravidade" sid="4297786664981192">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="8006952771019161">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="8669252762457093">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7910039265230016" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type global="1" name="powerUps" sid="2924957335582089">
-            <plugin id="Arr" />
         </object-type>
         <object-type name="canhao" sid="769063204493781">
             <plugin id="Sprite" />
@@ -380,6 +382,18 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
+        <object-type name="9patch" sid="1307900390777041">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="9patch2" sid="8650335250291617">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="9patch3" sid="2205829365490348">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Personagens" plugin-id="Sprite" sid="1646151690626581">
@@ -414,11 +428,17 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Barras" plugin-id="NinePatch" sid="102396840256241">
+            <members>
+                <member>9patch2</member>
+                <member>9patch3</member>
+            </members>
+        </family>
     </families>
     <layout-folder expanded="0">
         <layout>Layout 1.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>FASE.xml</event-sheet>
         <event-sheet>Personagens.xml</event-sheet>
         <event-sheet>Joystick.xml</event-sheet>
